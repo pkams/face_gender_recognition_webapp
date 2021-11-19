@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import joblib
 import numpy as np
 
-data = np.load('data/data_normalized_100x100.npz')
+data = np.load('../data/data_normalized_100x100.npz')
 print(data.files)
 x = data['arr_0']
 y = data['arr_1']
@@ -24,8 +24,8 @@ print('Features: ', arg, '- Explained Variance: ', explained_variance_ratio_cums
 # Applying pca to extract features and reverting to the original size
 pca = PCA(n_components=50, whiten=True)
 x_pca_feat = pca.fit_transform(x)
-joblib.dump(pca, 'model/pcafeat_model.joblib')
-np.save('data/data_pcafeat_100x100.npy', x_pca_feat)
+joblib.dump(pca, '../model/pcafeat_model.joblib')
+np.save('../data/data_pcafeat_100x100.npy', x_pca_feat)
 
 # Reverting state
 x_pca_inv = pca.inverse_transform(x_pca_feat)

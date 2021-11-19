@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv('data/dataframe_100x100.csv')
+df = pd.read_csv('../data/dataframe_100x100.csv')
 print(df.head())
 print(df.tail())
 
@@ -14,4 +14,4 @@ print(np.unique(y_encod))
 
 print(x_norm.head())
 
-np.savez('data/data_normalized_100x100.npz', x_norm, y_encod)
+np.savez('../data/data_normalized_100x100.npz', x_norm, y_encod)

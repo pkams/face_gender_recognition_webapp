@@ -28,7 +28,7 @@ def crop_face(im, cascade_file):
 if __name__ == '__main__':
 
     # Loading files
-    cascade_file = 'model/haarcascade_frontalface_default.xml'
+    cascade_file = '../model/haarcascade_frontalface_default.xml'
     im = cv2.imread('data/male_000281.jpg')
 
     # 1. Example image
