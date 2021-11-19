@@ -1,5 +1,6 @@
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
+import joblib
 import numpy as np
 
 data = np.load('data/data_normalized_100x100.npz')
@@ -23,6 +24,7 @@ print('Features: ', arg, '- Explained Variance: ', explained_variance_ratio_cums
 # Applying pca to extract features and reverting to the original size
 pca = PCA(n_components=50, whiten=True)
 x_pca_feat = pca.fit_transform(x)
+joblib.dump(pca, 'model/pcafeat_model.joblib')
 np.save('data/data_pcafeat_100x100.npy', x_pca_feat)
 
 # Reverting state
