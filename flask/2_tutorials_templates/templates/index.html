@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Flask App</title>
+</head>
+<body>
+    <h1>Welcome {{ name }}</h1>
+    <p>The app is under construction!</p>
+    <p>Hi {{ name }} your mark is {{ marks }}</p>
+    {% if marks >= 50 %}<p> You passed! {% endif %}
+    {% if marks < 50 %}<p> Unfortunelly, you failed. {% endif %}
+
+</body>
+</html>

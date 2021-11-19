@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Flask App</title>
+</head>
+<body>
+    <h1>For Loops</h1>
+    <table border="1px" align="center">
+        <tr>
+            <th>Subjects</th>
+            <th>Notes</th>
+            <th>Passed?</th>
+        </tr>
+        {% for keys,values in data.items() %}
+        <tr>
+            <td>{{ keys }}</td>
+            <td>{{ values }}</td>
+            <td>
+            {% if values > 50 %}
+                <span style="color:green">P</span>
+            {% else %}
+                <span style="color:red">F</span>
+            {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</body>
+</html>

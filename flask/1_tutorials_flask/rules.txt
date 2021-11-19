@@ -1,0 +1,25 @@
+### Url building
+We can use <path>, <int:value> or <float:value> in a URL. <br>
+The structure  to acess the app will be:<br>
+ip:port defined in app.run()<br>
+The default values are 127.0.0.1:5000 but we can change that if needed.
+
+@app.route('/') is the default.<br>
+@app.route('/sometag') will create a route to:
+ip:port/sometag 
+
+@app.route('/sometag/<int:variable>') will create a route using the value inserted into the function.
+
+@app.route('/sometag/<int:variable>')
+def test_route(variable):
+    return f'This is the value: {variable}'
+    
+Same applies to the <float:value>.
+
+### Jinja Templates
+- Is a modern designer-friendly templating language for Python, modelled after Django templates. 
+jinja2 template engine uses following delimiters:
+- {% ... %} for statements (if, else, loops, extendings, blocking)
+- {{}} for expressions to print to template output
+- {# ... #} for comments not included in output
+- # ... ## for line statement
