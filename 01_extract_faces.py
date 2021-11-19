@@ -58,7 +58,7 @@ if __name__ == '__main__':
             cv2.imwrite(new_path, im_cropped)
         except:
             errors+=1
-            print(f"Can't find any face in the image {image}")
+            #print(f"Can't find any face in the image {image}")
 
     print('Total errors: ', errors)
 

@@ -1,6 +1,4 @@
 venv
 .idea
-data/data_normalized_100x100.npz
-data/dataframe_100x100.csv
-data/cropped
+data
 
