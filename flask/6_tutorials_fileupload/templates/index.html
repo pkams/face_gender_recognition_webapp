@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web APP</title>
+</head>
+<body>
+    <h3>Uploads</h3>
+    <form action="" method="POST" enctype="multipart/form-data">
+        <input type="file" name="upload">
+        <input type="submit" value="upload">
+    </form>
+
+    {% if upload %}
+        <img src="{{url_for('static', filename='uploads/')}}{{ fname }}" alt="freeai" width="300" height="300">
+    {% endif %}
+</body>
+</html>

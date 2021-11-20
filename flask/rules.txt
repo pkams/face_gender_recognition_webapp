@@ -23,3 +23,10 @@ jinja2 template engine uses following delimiters:
 - {{}} for expressions to print to template output
 - {# ... #} for comments not included in output
 - # ... ## for line statement
+
+### HTTP Methods
+- GET -> Send data from the server
+- HEAD -> Same as GET without response body
+- POST -> Used to send html form data to server
+- PUT -> Replace all current representations of the target response with uploaded content
+- DELETE -> Removes all current representations of the target resources given by a URL
