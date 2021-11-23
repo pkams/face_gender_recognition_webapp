@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="container">
+    <br>
+    <br>
+    <h3 class="content">
+        <span style="color:#198b90">Face and Gender</span> Recognition App
+    </h3>
+    <br>
+    <p>
+        Gender app: This application receives an image and outputs the coordinates of the faces and their genders. The face extraction was develivered using OpenCV and the ML was developed using pycaret. The deployment of the application was entirelly buildining using Flask.
+    </p>
+    <div align="center">
+    <img src="{{ url_for('static', filename='images/002.png') }}" alt="app-flow" height="230" width="650">
+    </div>
+    <br>
+
+    <div align="center">
+    <a class="btn btn-outline-primary" href="#" role="button">Try it now!</a>
+    </div>
+</div>
+
+
+{% endblock %}
